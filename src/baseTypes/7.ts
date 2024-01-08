@@ -3,11 +3,19 @@
   і повертає boolean значення, що вказує, чи це день робочий чи вихідний.
 */
 
-enum WorkOrWeekend {
-  Weekend,
-  Workday,
+enum DayOfWeek {
+  Monday,
+  Tuesday,
+  Wednesday,
+  Thursday,
+  Friday,
+  Saturday,
+  Sunday,
 }
 
-function isWeekend(dayStatus: WorkOrWeekend): boolean {
-  return dayStatus === WorkOrWeekend.Weekend;
+function isWeekend(day: DayOfWeek): boolean {
+  if (day === DayOfWeek.Saturday || day === DayOfWeek.Sunday) {
+    return true;
+  } 
+  return false
 }
